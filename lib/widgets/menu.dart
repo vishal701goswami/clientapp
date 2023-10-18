@@ -5,6 +5,8 @@ import 'package:garduino_dashboard/Responsive.dart';
 import 'package:garduino_dashboard/main.dart';
 import 'package:garduino_dashboard/model/menu_modal.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:garduino_dashboard/widgets/user.list.dart';
+import 'package:garduino_dashboard/widgets/vip.list.dart';
 
 import 'controller_page.dart';
 import 'aboutUs.dart';
@@ -26,7 +28,7 @@ class _MenuState extends State<Menu> {
     MenuModel(icon: 'assets/svg/bell.svg', title: "USDT ID"),
     MenuModel(icon: 'assets/svg/history.svg', title: "Banners"),
     MenuModel(icon: 'assets/svg/setting.svg', title: "User List"),
-    MenuModel(icon: 'assets/svg/profile.svg', title: "About Us"),
+    MenuModel(icon: 'assets/svg/profile.svg', title: "Vip List"),
     MenuModel(icon: 'assets/svg/signout.svg', title: "Exit"),
   ];
 
@@ -107,13 +109,13 @@ class _MenuState extends State<Menu> {
                       case 5: //Settings
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const ControllerPage()),
+                              builder: (context) => const UserListPage()),
                         );
                         break;
                       case 6: //About Us
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const AboutUsPage()),
+                              builder: (context) => const VipDesktop()),
                         );
                         break;
                       case 7: //Exit

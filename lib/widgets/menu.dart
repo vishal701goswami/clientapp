@@ -100,11 +100,10 @@ class _MenuState extends State<Menu> {
                         break;
                       case 3: //Notification
                         Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const Usdt()),
+                          MaterialPageRoute(builder: (context) => const Usdt()),
                         );
                         break;
-                     
+
                       case 4: //Settings
                         Navigator.of(context).push(
                           MaterialPageRoute(
@@ -118,10 +117,11 @@ class _MenuState extends State<Menu> {
                         );
                         break;
                       case 6: //Exit
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const Loginpage()),
-                        );
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => Loginpage()),
+                            (route) => false);
                         break;
                     }
                   },

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:garduino_dashboard/const.dart';
+import 'package:garduino_dashboard/dashboard.dart';
 
 class Loginpage extends StatefulWidget {
   const Loginpage({super.key});
@@ -49,6 +50,9 @@ class _LoginpageState extends State<Loginpage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
                   controller: _emailcontroller,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -65,6 +69,9 @@ class _LoginpageState extends State<Loginpage> {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
                 child: TextFormField(
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
                   controller: _passcontroller,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -79,18 +86,32 @@ class _LoginpageState extends State<Loginpage> {
                 ),
               ),
               const SizedBox(height: 30),
-              Container(
-                height: 55,
-                width: 160,
-                decoration: BoxDecoration(
-                    color: cardBackgroundColor,
-                    borderRadius: BorderRadius.circular(20)),
-                child: const Center(
-                  child: Text("LOGIN",
-                      style: TextStyle(
-                          fontSize: 20,
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white)),
+              GestureDetector(
+                onTap: () {
+                  if (_formkey.currentState!.validate()) {
+                    if (_emailcontroller.text == "admin@admin.com" &&
+                        _passcontroller.text == "admin@1234") {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => DashBoard()));
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(content: Text("Invalid Email passwords")));
+                    }
+                  }
+                },
+                child: Container(
+                  height: 55,
+                  width: 160,
+                  decoration: BoxDecoration(
+                      color: cardBackgroundColor,
+                      borderRadius: BorderRadius.circular(20)),
+                  child: const Center(
+                    child: Text("LOGIN",
+                        style: TextStyle(
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white)),
+                  ),
                 ),
               ),
             ],

@@ -32,11 +32,7 @@ class DashBoard extends StatelessWidget {
                       child: Menu(scaffoldKey: _scaffoldKey)),
                 ),
               Expanded(flex: 8, child: HomePage(scaffoldKey: _scaffoldKey)),
-              if (!Responsive.isMobile(context))
-                const Expanded(
-                  flex: 4,
-                  child: Profile(),
-                ),
+              
             ],
           ),
         ));

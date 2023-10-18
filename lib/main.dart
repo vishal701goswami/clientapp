@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:garduino_dashboard/const.dart';
 import 'package:garduino_dashboard/dashboard.dart';
+import 'package:garduino_dashboard/widgets/Loginpage.dart';
 
 void main() {
   runApp(const MyApp());
@@ -34,7 +35,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: const Color(0xFF171821),
           fontFamily: 'IBMPlexSans',
           brightness: Brightness.dark),
-      home: DashBoard(),
+      home: Loginpage(),
     );
   }
 }

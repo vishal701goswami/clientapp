@@ -26,9 +26,7 @@ class Profile extends StatelessWidget {
               const SizedBox(
                 height: 50,
               ),
-              Image.asset(
-                "assets/images/avatar.png",
-              ),
+              
               const SizedBox(
                 height: 15,
               ),

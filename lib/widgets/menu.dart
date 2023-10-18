@@ -5,6 +5,7 @@ import 'package:garduino_dashboard/Responsive.dart';
 import 'package:garduino_dashboard/main.dart';
 import 'package:garduino_dashboard/model/menu_modal.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:garduino_dashboard/widgets/Loginpage.dart';
 import 'package:garduino_dashboard/widgets/VIP_add.dart';
 
 import 'controller_page.dart';
@@ -120,7 +121,7 @@ class _MenuState extends State<Menu> {
                       case 7: //Exit
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const AboutUsPage()),
+                              builder: (context) => const Loginpage()),
                         );
                         break;
                     }

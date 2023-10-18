@@ -43,6 +43,7 @@ class _InvitePageState extends State<InvitePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                         child: TextFormField(
+                          style: TextStyle(color: Colors.black),
                       controller: _levelcontroller,
                       decoration: InputDecoration(
                         // labelText: '',
@@ -74,6 +75,7 @@ class _InvitePageState extends State<InvitePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       child: TextFormField(
+                        style: TextStyle(color: Colors.black),
                         controller: _dailytaskcontroller,
                         decoration: InputDecoration(
                           // labelText: '',
@@ -111,6 +113,7 @@ class _InvitePageState extends State<InvitePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       child: TextFormField(
+                        style: TextStyle(color: Colors.black),
                         controller: _singleprofitcontroller,
                         decoration: InputDecoration(
                           // labelText: '',
@@ -142,6 +145,7 @@ class _InvitePageState extends State<InvitePage> {
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
                       child: TextFormField(
+                        style: TextStyle(color: Colors.black),
                         controller: _dailyprofitcontroller,
                         decoration: InputDecoration(
                           // labelText: '',

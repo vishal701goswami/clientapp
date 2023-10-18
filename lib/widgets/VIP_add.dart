@@ -86,40 +86,40 @@ class _VipAddPageState extends State<VipAddPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        
                         child: TextFormField(
-                          controller: _levelcontroller,
-                          decoration: InputDecoration(
-                            // labelText: '',
-                            hintText: 'Level',
-                            hintStyle: const TextStyle(color: Colors.black),
-                            // Suffix icon after the input field
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            filled: true,
-                            fillColor: Colors.grey[200],
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.black),
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                          ),
-                          // A
-                          //dditional properties like validator and onSaved can be added here.
-                          validator: (value) {
-                            if (value!.isEmpty || value == null) {
-                              return "This field is required";
-                            }
-                          },
-                        )),
+                      controller: _levelcontroller,
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        // labelText: '',
+                        hintText: 'Level',
+                        hintStyle: const TextStyle(color: Colors.black),
+                        // Suffix icon after the input field
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        filled: true,
+                        fillColor: Colors.grey[200],
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.black),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                      // A
+                      //dditional properties like validator and onSaved can be added here.
+                      validator: (value) {
+                        if (value!.isEmpty || value == null) {
+                          return "This field is required";
+                        }
+                      },
+                    )),
                   ),
                 ),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      
                       child: TextFormField(
+                        style: TextStyle(color: Colors.black),
                         controller: _dailytaskcontroller,
                         decoration: InputDecoration(
                           // labelText: '',
@@ -156,8 +156,8 @@ class _VipAddPageState extends State<VipAddPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      
                       child: TextFormField(
+                        style: TextStyle(color: Colors.black),
                         controller: _singleprofitcontroller,
                         decoration: InputDecoration(
                           // labelText: '',
@@ -188,8 +188,8 @@ class _VipAddPageState extends State<VipAddPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                      
                       child: TextFormField(
+                        style: TextStyle(color: Colors.black),
                         controller: _dailyprofitcontroller,
                         decoration: InputDecoration(
                           // labelText: '',
@@ -226,63 +226,64 @@ class _VipAddPageState extends State<VipAddPage> {
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        
+
                         // decoration: BoxDecoration(
                         //     color: Colors.white,
                         //     borderRadius: BorderRadius.circular(30)),
                         child: TextFormField(
-                          controller: _totalprofitcontroller,
-                          decoration: InputDecoration(
-                            hintText: 'Total Profit',
-                            hintStyle: const TextStyle(color: Colors.black),
-                            // Suffix icon after the input field
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            filled: true,
-                            fillColor: Colors.grey[200],
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.blue),
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                          ),
-                          validator: (value) {
-                            if (value!.isEmpty || value == null) {
-                              return "This field is required";
-                            }
-                          },
-                          // Additional properties like validator and onSaved can be added here.
-                        )),
+                          style: TextStyle(color: Colors.black),
+                      controller: _totalprofitcontroller,
+                      decoration: InputDecoration(
+                        hintText: 'Total Profit',
+                        hintStyle: const TextStyle(color: Colors.black),
+                        // Suffix icon after the input field
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        filled: true,
+                        fillColor: Colors.grey[200],
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty || value == null) {
+                          return "This field is required";
+                        }
+                      },
+                      // Additional properties like validator and onSaved can be added here.
+                    )),
                   ),
                 ),
                 Expanded(
                   child: Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Container(
-                        
                         child: TextFormField(
-                          controller: _usdtcontroller,
-                          decoration: InputDecoration(
-                            hintText: 'USDT',
-                            hintStyle: const TextStyle(color: Colors.black),
-                            // Suffix icon after the input field
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                            filled: true,
-                            fillColor: Colors.grey[200],
-                            focusedBorder: OutlineInputBorder(
-                              borderSide: const BorderSide(color: Colors.blue),
-                              borderRadius: BorderRadius.circular(10.0),
-                            ),
-                          ),
-                          validator: (value) {
-                            if (value!.isEmpty || value == null) {
-                              return "This field is required";
-                            }
-                          },
-                          // Additional properties like validator and onSaved can be added here.
-                        )),
+                      controller: _usdtcontroller,
+                      style: TextStyle(color: Colors.black),
+                      decoration: InputDecoration(
+                        hintText: 'USDT',
+                        hintStyle: const TextStyle(color: Colors.black),
+                        // Suffix icon after the input field
+                        border: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                        filled: true,
+                        fillColor: Colors.grey[200],
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: const BorderSide(color: Colors.blue),
+                          borderRadius: BorderRadius.circular(10.0),
+                        ),
+                      ),
+                      validator: (value) {
+                        if (value!.isEmpty || value == null) {
+                          return "This field is required";
+                        }
+                      },
+                      // Additional properties like validator and onSaved can be added here.
+                    )),
                   ),
                 ),
               ],

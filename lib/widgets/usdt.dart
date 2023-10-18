@@ -73,6 +73,7 @@ class _UsdtState extends State<Usdt> {
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
                           child: TextFormField(
+                            style: TextStyle(color: Colors.black),
                         controller: _levelcontroller,
                         decoration: InputDecoration(
                           // labelText: '',

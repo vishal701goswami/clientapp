@@ -5,11 +5,14 @@ import 'package:garduino_dashboard/Responsive.dart';
 import 'package:garduino_dashboard/main.dart';
 import 'package:garduino_dashboard/model/menu_modal.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:garduino_dashboard/widgets/VIP_add.dart';
+import 'package:garduino_dashboard/widgets/usdt.dart';
 import 'package:garduino_dashboard/widgets/user.list.dart';
 import 'package:garduino_dashboard/widgets/vip.list.dart';
 
 import 'controller_page.dart';
 import 'aboutUs.dart';
+import 'invite.price.dart';
 
 class Menu extends StatefulWidget {
   final GlobalKey<ScaffoldState> scaffoldKey;
@@ -26,7 +29,7 @@ class _MenuState extends State<Menu> {
     MenuModel(icon: 'assets/svg/remote.svg', title: "Add Vip"),
     MenuModel(icon: 'assets/svg/share-2.svg', title: "Invite Price"),
     MenuModel(icon: 'assets/svg/bell.svg', title: "USDT ID"),
-    MenuModel(icon: 'assets/svg/history.svg', title: "Banners"),
+    // MenuModel(icon: 'assets/svg/history.svg', title: "Banners"),
     MenuModel(icon: 'assets/svg/setting.svg', title: "User List"),
     MenuModel(icon: 'assets/svg/profile.svg', title: "Vip List"),
     MenuModel(icon: 'assets/svg/signout.svg', title: "Exit"),
@@ -84,41 +87,36 @@ class _MenuState extends State<Menu> {
                       case 1: // Controller
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const ControllerPage()),
+                              builder: (context) => const VipAddPage()),
                         );
                         break;
                       // Add similar cases for other menu items
                       case 2: //Connect
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const ControllerPage()),
+                              builder: (context) => const InvitePage()),
                         );
                         break;
                       case 3: //Notification
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                              builder: (context) => const ControllerPage()),
+                              builder: (context) => const Usdt()),
                         );
                         break;
-                      case 4: //History
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                              builder: (context) => const ControllerPage()),
-                        );
-                        break;
-                      case 5: //Settings
+                     
+                      case 4: //Settings
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const UserListPage()),
                         );
                         break;
-                      case 6: //About Us
+                      case 5: //About Us
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const VipDesktop()),
                         );
                         break;
-                      case 7: //Exit
+                      case 6: //Exit
                         Navigator.of(context).push(
                           MaterialPageRoute(
                               builder: (context) => const AboutUsPage()),
